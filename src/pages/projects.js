@@ -1,22 +1,25 @@
 import AnimatedText from "@/components/AnimatedText";
-import { GithubIcon } from "@/components/Icons";
+import { BehanceI } from "@/components/Icons";
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import proj1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
-import proj2 from "../../public/images/projects/nft-collection-website-cover-image.jpg";
-import proj3 from "../../public/images/projects/fashion-studio-website.jpg";
-import proj4 from "../../public/images/projects/portfolio-cover-image.jpg";
-import proj5 from "../../public/images/projects/agency-website-cover-image.jpg";
-import proj6 from "../../public/images/projects/devdreaming.jpg";
+import proj1 from "../../public/images/projects/3d-char.jpg";
+import proj2 from "../../public/images/projects/3d-char2.jpg";
+import proj3 from "../../public/images/projects/3d-logo.jpg";
+import proj4 from "../../public/images/projects/3d-logo2.jpg";
+import proj5 from "../../public/images/projects/3d-logo3.jpg";
+import proj6 from "../../public/images/projects/banner-1.jpg";
+import proj7 from "../../public/images/projects/banner-2.jpg";
+import proj8 from "../../public/images/projects/logo.jpg";
+import proj9 from "../../public/images/projects/mascot.jpg";
+import proj10 from "../../public/images/projects/wolf.jpg";
 import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image);
 
-const FeaturedProject = ({ type, title, summary, img, link, github }) => {
-
+const FeaturedProject = ({ type, title, summary, img, link, Behance }) => {
   return (
     <article
       className="relative flex w-full items-center  justify-between rounded-3xl rounded-br-2xl border
@@ -65,12 +68,12 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
         </p>
         <div className="mt-2 flex items-center">
           <Link
-            href={github}
+            href={Behance}
             target={"_blank"}
             className="w-10"
-            aria-label="Crypto Screener Application github link"
+            aria-label="Behance"
           >
-            <GithubIcon />
+            <BehanceI />
           </Link>
           <Link
             href={link}
@@ -79,7 +82,7 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
              bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark 
              sm:px-4 sm:text-base
             "
-            aria-label="Crypto Screener Application"
+            aria-label="Behance"
           >
             Visit Project
           </Link>
@@ -89,8 +92,7 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
   );
 };
 
-const Project = ({ title, type, img, link, github }) => {
-
+const Project = ({ title, type, img, link, Behance }) => {
   return (
     <article
       className="relative flex w-full flex-col items-center justify-center rounded-2xl  rounded-br-2xl 
@@ -146,12 +148,12 @@ const Project = ({ title, type, img, link, github }) => {
             Visit
           </Link>
           <Link
-            href={github}
+            href={Behance}
             target={"_blank"}
             className="w-8 md:w-6"
             aria-label={title}
           >
-            <GithubIcon />
+            <BehanceI />
           </Link>
         </div>
       </div>
@@ -166,7 +168,7 @@ export default function Projects() {
         <title>Modern Portfolio Built with Nextjs | Projects Page</title>
         <meta
           name="description"
-          content="Discover the latest webapp projects created by CodeBucks, a Next.js developer with 
+          content="Discover the latest webapp projects created by Hassaan, a Next.js developer with 
         expertise in React.js and full-stack development. Browse software engineering articles and tutorials for tips on creating your own portfolio."
         />
       </Head>
@@ -184,57 +186,95 @@ export default function Projects() {
             <div className="col-span-12">
               <FeaturedProject
                 type="Featured Project"
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
+                title="3D-Chracter Project"
+                summary="A 3D CHARACTER WHICH IS BUILT WITH THE HELP OF AI AND MY SKILLS OF DESIGNING AND TURING CREATIVITY INTO REALITY WITH DESIGNS!"
                 img={proj1}
-                link="https://devdreaming.com/videos/build-crypto-screener-app-with-react-tailwind-css"
-                github="https://github.com/codebucks27/CryptoBucks-Final-Code"
+                link="https://www.behance.net/notonlydesigners23"
+                Behance="https://www.behance.net/notonlydesigners23"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Website Template"
-                title="NFT collection Website"
+                type="3D characters"
+                title="3d-Characters Project (2) "
                 img={proj2}
-                link="https://devdreaming.com/videos/create-nft-collection-website-reactjs"
-                github="https://github.com/codebucks27/The-Weirdos-NFT-Website-Starter-Code"
+                link="https://www.behance.net/notonlydesigners23"
+                Behance="https://www.behance.net/notonlydesigners23"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Website"
-                title="Fashion Studio Website"
+                type="Logo Designing"
+                title="3D logo"
                 img={proj3}
-                link="https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap"
-                github="https://github.com/codebucks27/wibe-studio"
+                link="https://www.behance.net/notonlydesigners23"
+                Behance="https://www.behance.net/notonlydesigners23"
               />
             </div>
             <div className="col-span-12">
               <FeaturedProject
-                type="Portfolio Website"
-                title="React Portfolio Website"
-                summary="A professional portfolio website using React JS, Framer-motion, and Styled-components. It has smooth page transitions, cool background effects, unique design and it is mobile responsive."
+                type="LOGO DESIGNING"
+                title="3D LOGO "
+                summary="A professional 3D logo design built with AI and Adobe Premier Pro."
                 img={proj4}
-                link="https://devdreaming.com/videos/build-stunning-portfolio-website-react-js-framer-motion"
-                github="https://github.com/codebucks27/react-portfolio-final"
+                link="https://www.behance.net/notonlydesigners23"
+                Behance="https://www.behance.net/notonlydesigners23"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Website Template"
+                type="LOGO DESIGNING"
                 img={proj5}
-                title="Agency Website Template"
-                link="https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap"
-                github="https://github.com/codebucks27/wibe-studio"
+                title="Creative 3d Logo Design"
+                link="https://www.behance.net/notonlydesigners23"
+                Behance="https://www.behance.net/notonlydesigners23"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Blog Website"
+                type="Banner Design"
                 img={proj6}
-                title="DevDreaming"
-                link="https://devdreaming.com"
-                github="https://github.com/codebucks27"
+                title="Banners"
+                link="https://www.behance.net/notonlydesigners23"
+                Behance="https://www.behance.net/notonlydesigners23"
+              />
+            </div>
+            <div className="col-span-12">
+              <FeaturedProject
+                type="Featured Project"
+                title="Banner Design"
+                summary="Banners/Pamphlet designed by me through Canva.I can Develop Banners/Pamphlet for any Company  or a Client Interested in my Skills."
+                img={proj7}
+                link="https://www.behance.net/notonlydesigners23"
+                Behance="https://www.behance.net/notonlydesigners23"
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="Logo Design"
+                img={proj8}
+                title="Logo Design IN Canva "
+                link="https://www.behance.net/notonlydesigners23"
+                Behance="https://www.behance.net/notonlydesigners23"
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                type="SPECIAL 3D CHARACTERS"
+                img={proj9}
+                title="MASCIOT (3D Character)"
+                link="https://www.behance.net/notonlydesigners23"
+                Behance="https://www.behance.net/notonlydesigners23"
+              />
+            </div>
+            <div className="col-span-12">
+              <FeaturedProject
+                type="Featured Project"
+                title="SPECIAL 3D CHARACTERS"
+                summary="A SPECIAL 3D CHARACTER DESIGNED BY ME IS A PERFECT EXAMPLE THAT SHOWCASES MY ABILITIES OF DESIGNES AND CREATIVITY OF MAKING SPECIAL DESIGNS. "
+                img={proj10}
+                link="https://www.behance.net/notonlydesigners23"
+                Behance="https://www.behance.net/notonlydesigners23"
               />
             </div>
           </div>

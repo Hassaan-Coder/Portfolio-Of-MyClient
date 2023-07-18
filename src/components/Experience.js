@@ -1,12 +1,8 @@
 import React, { useRef } from "react";
-import {
-  motion,
-  useScroll,
-} from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
 
-
-const Details = ({ position, company, companyLink, time, address, work }) => {
+const Details = ({ position, company, companyLink, work }) => {
   const ref = useRef(null);
   return (
     <li
@@ -29,9 +25,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
             @{company}
           </a>
         </h3>
-        <span className="capitalize text-dark/75 font-medium dark:text-light/50 xs:text-sm">
-          {time} | {address}
-        </span>
+
         <p className="font-medium w-full md:text-sm"> {work}</p>
       </motion.div>
     </li>
@@ -39,7 +33,6 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
 };
 
 const Experience = () => {
-
   const ref = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -48,75 +41,52 @@ const Experience = () => {
   });
 
   return (
+    <div className="my-64">
+      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
+        Experience
+      </h2>
 
-      <div className="my-64">
-        <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
-          Experience
-        </h2>
-
-        <div ref={ref} className="relative w-[75%] mx-auto lg:w-[90%] md:w-full">
-          <motion.div
-            className="absolute left-9 top-0 w-[4px] md:w-[2px] md:left-[30px] xs:left-[20px] h-full bg-dark 
+      <div ref={ref} className="relative w-[75%] mx-auto lg:w-[90%] md:w-full">
+        <motion.div
+          className="absolute left-9 top-0 w-[4px] md:w-[2px] md:left-[30px] xs:left-[20px] h-full bg-dark 
             origin-top  dark:bg-primaryDark dark:shadow-3xl"
-            style={{ scaleY: scrollYProgress }}
+          style={{ scaleY: scrollYProgress }}
+        />
+        <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
+          <Details
+            position="Designs"
+            company="Adobe"
+            companyLink="https://www.adobe.com/"
+            work="Adobe's suite of software has become an indispensable part of my creative journey, allowing me to design captivating visuals, edit photos with precision, create compelling videos, and craft unique logos.
+            The following delineates the chronicle of my journey in acquiring proficiencies encompassing the realms of photo editing, graphic design, video editing, and logo design "
           />
-          <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
-            <Details
-              position="Software Engineer"
-              company="Google"
-              companyLink="https://google.com"
-              time="2022-Present"
-              address="Mountain View, CA"
-              work="Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
-            />
 
-            <Details
-              position="Intern"
-              company="Facebook"
-              companyLink="https://facebook.com"
-              time="Summer 2021"
-              address="Menlo Park, CA."
-              work="Worked on a team responsible for developing a new mobile app
-              feature that allowed users to create and share short-form video
-              content, including designing and implementing a new user interface
-              and developing the backend infrastructure to support the feature."
-            />
+          <Details
+            position="Video Editor"
+            company="Adobe Premier Pro"
+            companyLink="https://www.adobe.com/products/premiere.html"
+            work="My experience with Adobe Premiere Pro for video editing has been transformative. I have completed numerous projects, learning extensively along the way. Now, I have reached a proficient level in video editing, equipped with valuable skills and knowledge. Through experimentation and exploration, I have honed my abilities in assembling footage, applying effects, and color grading"
+          />
 
-            <Details
-              position="Software Developer"
-              company="Amazon"
-              companyLink="https://amazon.com"
-              time="2020-2021"
-              address="Seattle, WA."
-              work="Worked on a team responsible for developing Amazon's mobile app, including implementing new features such as product recommendations and user reviews, and optimizing the app's performance and reliability."
-            />
+          <Details
+            position="Graphic Designer"
+            company="Adobe Illustrator"
+            companyLink="https://www.adobe.com/products/illustrator/free-trial-download.html"
+            work="
+            My experience with Adobe Illustrator for graphic designing has been remarkable. Through numerous projects and continuous learning, I have developed a commendable level of skill in this field. I have gained knowledge in design principles, color theories, and typography. This hands-on experience has sharpened my problem-solving skills and expanded my creative thinking. Today, I am a skilled graphic designer with a good level of expertise in Adobe Illustrator, producing professional-grade designs that meet client expectations"
+          />
 
-            <Details
-              position="Software Developer Intern"
-              company="Microsoft"
-              companyLink="https://microsoft.com"
-              time="Summer 2019"
-              address="Redmond, WA."
-              work="Worked on a team responsible for developing new features for
-              Microsoft's Windows operating system, including implementing a new
-              user interface for a system settings panel and optimizing the
-              performance of a core system component."
-            />
-
-            <Details
-              position="Teaching Assistant"
-              company="MIT"
-              companyLink="https://mit.edu"
-              time="Fall 2018"
-              address="Massachusetts Ave, Cambridge, MA."
-              work="Assisted in teaching a course on computer programming, held office
-              hours to help students with assignments, and graded exams and
-              assignments."
-            />
-          </ul>
-        </div>
-        </div>
-    );
+          <Details
+            position="Designs Photo Editor"
+            company="Adobe PhotoShop"
+            companyLink="https://www.adobe.com/products/photoshop.html"
+            work="
+Through my experience with Adobe Photoshop, I have gained extensive knowledge and skills in photo editing and designing. Having completed numerous projects, I can confidently perform photo edits and create visually captivating designs. With a keen eye for detail and a passion for design, I deliver high-quality results that meet professional standards. Adobe Photoshop has become an essential tool in my creative journey, empowering me to bring my artistic visions to life efficiently and effectively."
+          />
+        </ul>
+      </div>
+    </div>
+  );
 };
 
 export default Experience;

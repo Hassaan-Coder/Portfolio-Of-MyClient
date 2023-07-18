@@ -1,12 +1,11 @@
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
-import profile from "../../public/images/profile/developer-pic-2.jpg";
+import profile from "../../public/images/profile/ahmed.jpg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
-import Education from "@/components/Education";
 import AnimatedText from "@/components/AnimatedText";
 import TransitionEffect from "@/components/TransitionEffect";
 
@@ -65,23 +64,25 @@ export default function About() {
                 BIOGRAPHY
               </h2>
               <p className="font-medium ">
-                Hi, I&apos;m <strong>AHMED</strong>, a web developer and UI/UX
-                designer with a passion for creating beautiful, functional, and
-                user-centered digital experiences. With 4 years of experience in
-                the field. I am always looking for new and innovative ways to
-                bring my clients&apos; visions to life.
+                Hi, I&apos;m <strong>AHMED</strong>, My autobiography as a
+                graphic designer reflects my passion, growth, and exploration
+                within the diverse facets of design. As the graphic design
+                industry continues to evolve, I look forward to embracing new
+                technologies and challenges, while always striving to create
+                designs that inspire and leave a lasting impact
               </p>
               <p className="my-4 font-medium">
-                I believe that design is about more than just making things look
-                pretty – it&apos;s about solving problems and creating
-                intuitive, enjoyable experiences for users.
+                From leveraging the power of Adobe and It&apos;s Softwares along
+                with Canva to diving into the realms of logo design, 3D
+                modeling, video editing, photo editing, animation, and prompt
+                engineering, my journey has been one of constant learning and
+                creative fulfillment.
               </p>
               <p className="font-medium">
-                Whether I&apos;m working on a website, mobile app, or other
-                digital product, I bring my commitment to design excellence and
-                user-centered thinking to every project I work on. I look
-                forward to the opportunity to bring my skills and passion to
-                your next project.
+                As the graphic design industry continues to evolve, I look
+                forward to embracing new technologies and challenges, while
+                always striving to create designs that inspire and leave
+                a lasting impact.
               </p>
             </div>
             <div
@@ -149,7 +150,6 @@ export default function About() {
 
           <Skills />
           <Experience />
-          <Education />
         </Layout>
       </main>
     </>
